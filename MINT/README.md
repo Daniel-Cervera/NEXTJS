@@ -54,3 +54,55 @@ nvm install --lts
 
 # Verificar versiones
 node -v && npm -v
+```
+
+# 🐚 Optimización de Terminal: Zsh + Oh My Zsh
+
+> **Descripción:** Guía para reemplazar la terminal Bash por defecto en Linux Mint por una configuración avanzada de Zsh, optimizada con plugins de productividad y temas visuales.
+
+---
+
+## 🛠️ Herramientas a Instalar
+| Herramienta | Función |
+| :--- | :--- |
+| **Zsh** | El shell interactivo (alternativa a Bash) |
+| **Oh My Zsh** | Framework para gestionar la configuración de Zsh |
+| **Plugins** | Autosuggestions y Syntax Highlighting |
+
+---
+
+## 🚀 Proceso de Instalación
+
+### 1. Instalar Zsh y cambiar el Shell por defecto
+Abre tu terminal actual y ejecuta:
+```bash
+sudo apt update
+sudo apt install zsh -y
+
+# Cambiar el shell por defecto (requiere cerrar sesión después)
+chsh -s $(which zsh)
+```
+
+### 2. Instalar Oh my Zsh
+
+```bash
+sh -c "$(curl -fsSL [https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh](https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh))"
+```
+
+### 3. Instalacion de pluggins esenciales 
+Estos pluggins nos sirven para ahorrarnos
+
+```bash
+# Zsh Autosuggestions
+git clone [https://github.com/zsh-users/zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+# Zsh Syntax Highlighting
+git clone [https://github.com/zsh-users/zsh-syntax-highlighting.git](https://github.com/zsh-users/zsh-syntax-highlighting.git) ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+### 4. Configuracion del archivo .zshrc 
+Edita tu configuracion (nano ~/.zshrc) y buscas la linea de pluggins para que quede asi:
+
+```bash
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting node npm)
+```
