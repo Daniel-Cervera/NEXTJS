@@ -1,6 +1,11 @@
 import Image from "next/image";
 import { redirect } from 'next/navigation';
 
+// Es importante para que el sistema genere la ruta en el sitio web 
+// Crear los directorios de la siguiente forma
+// Primero el componente llamado 'dashboard' 
+// Segundo el llamado 'counter'
+
 
 // Con este server component hacemos que nuestros usarios
 // sean redirijidos al igual como podemos ver que nos genera
