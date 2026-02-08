@@ -28,6 +28,8 @@ import { redirect } from 'next/navigation';
 // Caracteristica: El cliente (nevegador) no debe cambiar el metodo de la solicitud al redirigir.
 // Ejemplo: Redirecciones temporales de API o paginas de error.
 
+export default function HomePage() {
+redirect('/dashboard/counter');
+}
 
-redirect('/dashboard/counter'); 
 
