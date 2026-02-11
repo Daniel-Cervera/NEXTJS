@@ -29,7 +29,7 @@ import { redirect } from 'next/navigation';
 // Ejemplo: Redirecciones temporales de API o paginas de error.
 
 export default function HomePage() {
-redirect('/dashboard/counter');
+redirect('/dashboard/main');
 }
 
 
